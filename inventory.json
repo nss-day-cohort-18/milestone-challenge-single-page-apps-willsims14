@@ -1,0 +1,36 @@
+{
+	"cars": [
+    	{
+	      "make": "Nissan",
+	      "model": "Rogue",
+	      "year": "2006",
+	      "price": "8,999",
+	      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything.",
+	      "imageSource": "img/orange.jpg"
+	    },
+	    {
+	    	"make":"Honda",
+	    	"model":"Civic",
+	    	"year":"2008",
+	    	"price":"10,999",
+	    	"description":"An incredibly effiecient car.",
+	      	"imageSource": "img/orange.jpg"
+	    },
+	    {
+	    	"make":"Ford",
+	    	"model":"Taurus",
+	    	"year":"1999",
+	    	"price":"2,000",
+	    	"description":"Old cop car.",
+	      	"imageSource": "img/orange.jpg"
+	    },
+	    {
+	    	"make":"Kia",
+	    	"model":"Sorento",
+	    	"year":"2015",
+	    	"price":"14,000",
+	    	"description":"Blake Griffin woud love to see you in this car.",
+	      	"imageSource": "img/orange.jpg"
+	    }
+	]
+}

@@ -1,0 +1,49 @@
+/*#cardContainerMaster{
+	background-color: lightblue;
+}
+
+#cardContainer{
+	background-color: lightyellow;
+	margin: 1%;
+}*/
+
+
+.card{
+	margin-top: 2%;
+}
+
+.innerCard{
+	background-color: lightyellow;
+	border: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: 300px;
+	height: 300px;
+	justify-content: space-between;
+}
+
+.innerCard h3{
+	margin: 0;
+}
+
+#navText{
+	margin-top: 1%;
+	margin-left: 5%;
+}
+
+.carImage{
+	max-height: 215px;
+}
+
+.imageContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center
+}
+
+.row{
+	margin: 0;
+}
+
