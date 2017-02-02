@@ -8,39 +8,37 @@ var CarLot = (function (oldCarLot) {
         console.log("Inventory: ", inventory);
     };
 
-    oldCarLot.activateEvents = function(event){
-
-        // Container
-        var cardContainer = document.getElementById("cardContainer");
-        
-
+    oldCarLot.activateEvents = function(event0){
         // Text input for changing car descrription
-        var textArea = document.getElementById("navText");
-        var clickedCard = event.currentTarget;
+        let textArea = document.getElementById("navText");
+
+        let cardIndex = (event0.currentTarget.id).substring(6, 7);
+
+        let innerCard = document.getElementById("innerCard--" + cardIndex);
 
 
-
-        // RESET ALL CARD BORDERS HERE
-
+        textArea.value = "";
 
         // Focus text area when user clicks card
         textArea.focus();
 
+        // Reset all cards to original styles before styling the clicked card
+        CarLot.resetCardStyles();
+
         // Call function to set new border/color on clicked card
-        CarLot.cardClicked(clickedCard);
+        CarLot.styleClickedCard(innerCard, "lightblue");
 
         // Listen for text area to receive input
-        textArea.addEventListener("keyup", function(event1){
+        textArea.addEventListener("keyup", listen);
 
-            // If user hits enter, remove focus from text area and
-            //      call function to reset border/color to normal style
-            if(event1.keyCode ===  13){
-                textArea.blur();
-                // Set card back to normal
-            }else{
-                // clicked card's description is set to textArea.value;
-            }
+                // When focus is lost from text area, set new bio
+        textArea.addEventListener("focusout", function(event2){
+            console.log("FOCUSED OUT");
+
+
+
         });
+
 
     };
 
@@ -50,4 +48,12 @@ var CarLot = (function (oldCarLot) {
 
 CarLot.loadInventory(CarLot.receiveInventory);
 
+
+
+function listen(event){
+    "use strict";
+
+
+
+}
 
