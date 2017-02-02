@@ -75,13 +75,7 @@ function populateDOM(cars){
 
         card.appendChild(innerCard);
 
-        card.addEventListener("click", run);
+        card.addEventListener("click", CarLot.activateEvents);
 
         output.appendChild(card);
     }};
-
-    function run(event){
-        var cardToModify = event.currentTarget;
-        console.log("Card Selected: ", cardToModify);
-        // cardToModify.parentNode.removeChild(cardToModify);
-    }
