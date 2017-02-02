@@ -1,12 +1,3 @@
-/*#cardContainerMaster{
-	background-color: lightblue;
-}
-
-#cardContainer{
-	background-color: lightyellow;
-	margin: 1%;
-}*/
-
 
 .card{
 	margin-top: 2%;
@@ -33,7 +24,8 @@
 }
 
 .carImage{
-	max-height: 215px;
+	max-height: 200px;
+	max-width: 75%;
 }
 
 .imageContainer{
@@ -45,5 +37,14 @@
 
 .row{
 	margin: 0;
+}
+
+.notImage{
+	margin: 1% 0;
+	overflow: auto;
+}
+
+#pageHeader{
+	margin-left: 2.5%;
 }
 

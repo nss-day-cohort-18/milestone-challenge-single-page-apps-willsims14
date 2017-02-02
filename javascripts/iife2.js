@@ -8,40 +8,26 @@ var CarLot = (function (oldCarLot) {
         console.log("Inventory: ", inventory);
     };
 
-    oldCarLot.activateEvents = function(event0){
-        // Text input for changing car descrription
-        let textArea = document.getElementById("navText");
+    oldCarLot.activateEvents = function(event){
 
-        let cardIndex = (event0.currentTarget.id).substring(6, 7);
+        var tagIndex = event.target.parentNode.tag;
 
-        let innerCard = document.getElementById("innerCard--" + cardIndex);
+        var innerCard = document.getElementById("innerCard--" + tagIndex);
 
-
-        textArea.value = "";
-
-        // Focus text area when user clicks card
-        textArea.focus();
-
-        // Reset all cards to original styles before styling the clicked card
         CarLot.resetCardStyles();
-
-        // Call function to set new border/color on clicked card
         CarLot.styleClickedCard(innerCard, "lightblue");
 
-        // Listen for text area to receive input
-        textArea.addEventListener("keyup", listen);
+        textArea.value = "";
+        textArea.focus();
 
-                // When focus is lost from text area, set new bio
-        textArea.addEventListener("focusout", function(event2){
-            console.log("FOCUSED OUT");
-
-
-
-        });
-
+        // When there's a keyup, change the targeted car's (the one with the blue background)
+        //      text equal to what's in the textArea
+        textArea.addEventListener("keyup", function(event2){
+            var desc = document.getElementById("desc--" + tagIndex);
+            setTextOnBlueElement(event2.target.value);
+        }, false)
 
     };
-
     return oldCarLot;
 })(CarLot || {});
 
@@ -50,10 +36,5 @@ CarLot.loadInventory(CarLot.receiveInventory);
 
 
 
-function listen(event){
-    "use strict";
 
-
-
-}
 
