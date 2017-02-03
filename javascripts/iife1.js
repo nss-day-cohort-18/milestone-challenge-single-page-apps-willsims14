@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 var CarLot = (function () {
   var inventory = [];
 	return {
@@ -15,15 +13,14 @@ var CarLot = (function () {
                 // Gets the value of the only object in the JSON (which is the array of cars)
       			var data = Object.values(JSON.parse(event.target.responseText))[0];
       			inventory = data;
-                populateDOM(inventory);
+            CarLot.populateDOM(inventory);
       			callback1(inventory);
-
-			});	
-		},
-		getInventory: function(){
-			return inventory;
-		}
-	};
+            });	
+        },
+        getInventory: function(){
+            return inventory;
+        }
+    };
 })(CarLot || {});
 
 

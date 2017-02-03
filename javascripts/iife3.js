@@ -4,7 +4,8 @@ var CarLot = (function (oldCarLot) {
     var inventory = [];
 
     oldCarLot.styleClickedCard = function(card, color){
-        textArea.tag = card.id;
+        var textArea = document.getElementById("navText");
+        // textArea.tag = card.id;
 
         card.style.border = "4px solid black";
         card.style.backgroundColor = color;
@@ -22,7 +23,20 @@ var CarLot = (function (oldCarLot) {
         }
     };
 
+    oldCarLot.setTextOnBlueElement = function(text){
 
+        var container = document.getElementById("cardContainer");
+        var children = container.childNodes;
+        var finalChild;
+
+        for(var i = 0; i < children.length; i++){
+            var child = children[i].childNodes[0];
+            if(child.style.backgroundColor == "lightblue"){
+                finalChild = child;
+                finalChild.childNodes[3].innerHTML = text;
+            }
+        }
+    };
 
     return oldCarLot;
 })(CarLot || {});

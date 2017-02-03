@@ -11,8 +11,10 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "jshint": "^2.9.4",
-    "matchdep": "^1.0.1"
+    "matchdep": "^1.0.1",
+    "requirejs": "^2.3.2"
   }
 }
