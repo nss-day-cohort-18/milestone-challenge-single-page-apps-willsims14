@@ -1,6 +1,6 @@
 # Single Page Applications - Milestone Challenge
-# Will Sims
-# 2/3/2017
+## Will Sims
+### 2/3/2017
 
 ## Setup
 
